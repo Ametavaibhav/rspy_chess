@@ -279,8 +279,11 @@ fn get_sliding_attack_masks(from_square: u8, directions: &[i8], allowed_distance
 // Representing a move
 #[pyclass]
 pub struct Move {
+    #[pyo3(get, set)]
     to_square: u32,
+    #[pyo3(get, set)]
     from_square: u32,
+    #[pyo3(get, set)]
     promotion: Option<char>,
 }
 
